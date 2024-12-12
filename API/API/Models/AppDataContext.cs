@@ -4,12 +4,12 @@ namespace API.Models;
 
 public class AppDataContext : DbContext
 {
-    public DbSet<Tarefa> Tarefas { get; set; }
+    public DbSet<Tarefa> Tarefas { get; set; } 
     public DbSet<Categoria> Categorias { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=app.db");
+        optionsBuilder.UseSqlite("Data Source=Matheus.db");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
